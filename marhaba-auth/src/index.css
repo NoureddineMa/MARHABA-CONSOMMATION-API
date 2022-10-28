@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: white;
+    
+    font-family: 'Poppins', sans-serif;
+}
+.logo {
+    width: 100px;
+}
+.text-perso {
+    font-size: 9px;
+}
