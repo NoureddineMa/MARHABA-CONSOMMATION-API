@@ -1,9 +1,9 @@
 import React , {useState} from 'react';
 import image from '../assets/logo.png'
 import '../index.css'
-import { Link  } from 'react-router-dom'
+import { Link   } from 'react-router-dom'
 import axios from 'axios';
-
+import { showMessage } from './utiles/showMessage';
 
 const Register = () => {
     const [name , setName] = useState("")
@@ -12,6 +12,10 @@ const Register = () => {
     const [phone, setPhone] = useState("")
     const [adresse, setAdresse] = useState("")
     const [role, setRole]  = useState("")
+    const [Succes, setMessage] = useState(false)
+    const [isError, setIsError] = useState(false)
+
+
 
       const handleName = (e)=>{
         return setName(e.target.value)
@@ -31,7 +35,7 @@ const Register = () => {
       const handleRole = (e) => {
         return setRole(e.target.value)
       }
-      const API_URL = 'http://localhost:4000/api/auth/register';
+      const API_URL = 'http://localhost:7000/api/auth/register';
 
       const registerHandler = async ()=>{
         const 
@@ -47,10 +51,14 @@ const Register = () => {
        try {
          const result = await axios.post(API_URL , user)
          console.log(result.data.message)
+         setMessage(result.data.message)
+         isError(false);
           // console.log(user)
         //  )
        } catch (error) {
          console.log(error.response.data.message)
+         setMessage(error.response.data.message)
+         isError(true)
        }
       }
 
@@ -58,12 +66,13 @@ const Register = () => {
         <div 
         className='bg-gray-50 px-20 py-5 shadow-xl   rounded-2xl border-2 animate__animated animate__zoomIn border-gray-200 flex flex-col place-items-center'>
         <img 
-        src={image} 
+        src={image}  
         alt="img" 
         className='logo' />
         <h1 
         className='mt-2 text-center text-3xl font-bold tracking-tight text-fuchsia-900'>Create your account
         </h1>
+        { Succes &&  showMessage( isError , Succes)}
         <div 
         className='mt-4 '>
         <div>
@@ -81,7 +90,7 @@ const Register = () => {
         name="name" 
         type="name" 
         required 
-        class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1  text-gray-900 placeholder-gray-500 focus:z-10 focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm " 
+        className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1  text-gray-900 placeholder-gray-500 focus:z-10 focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm " 
         placeholder="Enter Your Name" />
         {/* end input Name  */}
 
@@ -97,7 +106,7 @@ const Register = () => {
         onChange={handleEmail}
         name="email" 
         type="email" 
-        autocomplete="email" 
+        autoComplete="email" 
         required 
         class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1 text-gray-900 placeholder-gray-500 focus:z-10  focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm" placeholder="Enter Your email address" />
         {/* end input email  */}
@@ -113,7 +122,7 @@ const Register = () => {
         value={password}
         onChange={handlePassword}
         type="password" 
-        autocomplete="password" 
+        autoComplete="password" 
         required 
         class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1 text-gray-900 placeholder-gray-500 focus:z-10  focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm" 
         placeholder="***************" />
@@ -132,7 +141,7 @@ const Register = () => {
         onChange={handlePhone}
         name="Phone Number" 
         type="Phone Number" 
-        autocomplete="Phone Number" 
+        autoComplete="Phone Number" 
         required 
         className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 my-1 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10  focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm" 
         placeholder="06 XX XX XX XX " />
@@ -151,7 +160,7 @@ const Register = () => {
         onChange={handleAdresse}
         name="adresse" 
         type="adresse" 
-        autocomplete="adresse" 
+        autoComplete="adresse" 
         required 
         className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 my-1 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10  focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm" 
         placeholder="Enter your adresse " />
@@ -166,7 +175,7 @@ const Register = () => {
         value={role}
         onChange={handleRole}
         type="role" 
-        autocomplete="role" 
+        autoComplete="role" 
         required 
         className="mt-3 block w-full  rounded-none rounded-t-md border  px-3 py-2 text-gray-900  focus:z-10  focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm">
         <option selected>Choose your Role</option>
