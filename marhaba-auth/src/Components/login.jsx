@@ -1,4 +1,4 @@
-import  react , {useState , } from 'react';
+import  react , {useState} from 'react';
 import image from '../assets/logo.png'
 import '../index.css'
 import { Link , useNavigate , useParams} from 'react-router-dom'
@@ -15,7 +15,7 @@ const  Login = () =>  {
     const [password , setPassword] = useState("")
     const [Message, setMessage] = useState("")
     const [Error , setError] = useState(false);
-    // just for test:
+   
     
 
     const handleEmail = (e)=>{
