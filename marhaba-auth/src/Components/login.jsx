@@ -10,7 +10,7 @@ import { showMessage } from './utiles/showMessage';
 
 const  Login = () =>  {
 
-    const { token } = useParams();
+    const navigate = useNavigate();
     const [email , setEmail] = useState("")
     const [password , setPassword] = useState("")
     const [Message, setMessage] = useState("")
@@ -35,14 +35,15 @@ const  Login = () =>  {
         try {
             const result = await axios.post(API_URL , user)
             // const tok = result.data.token
-            
-            console.log(result.data)
-            
+            // console.log(result.data)
+            const token = result.data
+            localStorage.setItem("token", token);
             setError(false)
-            
-
+            // setTimeout(() => {
+            //     navigate('/register')
+            // }, 3000);
           } catch (error) {
-            console.log(error.response.data.message)
+            // console.log(error.response.data.message)
             setMessage(error.response.data.message)
             setError(true)
             
