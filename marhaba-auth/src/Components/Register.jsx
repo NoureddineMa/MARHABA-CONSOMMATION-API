@@ -51,7 +51,7 @@ const Register = () => {
        try {
          const result = await axios.post(API_URL , user)
          console.log(result.data.message)
-         setMessage(result.data.message)
+         
          isError(false);
           // console.log(user)
         //  )

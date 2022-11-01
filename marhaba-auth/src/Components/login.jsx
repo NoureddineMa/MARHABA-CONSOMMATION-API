@@ -34,8 +34,12 @@ const  Login = () =>  {
         }
         try {
             const result = await axios.post(API_URL , user)
-            console.log(result.data.message)
+            // const tok = result.data.token
+            
+            console.log(result.data)
+            
             setError(false)
+            
 
           } catch (error) {
             console.log(error.response.data.message)

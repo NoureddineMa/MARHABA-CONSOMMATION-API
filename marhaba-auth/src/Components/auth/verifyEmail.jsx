@@ -20,7 +20,7 @@ function VerifyEmail () {
                 setTimeout(() => { navigate('/Login') }, 3000)
             })
             .catch((error) => {
-                const msgError = error.response.data.messagev
+                const msgError = error.response.data.message
                 // console.log(msgError);
                 setSucces(msgError)
             })
