@@ -5,6 +5,7 @@ import Forgotpassword from './Components/forgotpassword'
 import VerifyEmail from './Components/auth/verifyEmail'
 import Resetpassword from './Components/ResetPassword'
 import PageNotFound from './Components/no results/404'
+import Getme from './Components/dashboard/Getme'
 import './index.css'
 
 import {BrowserRouter as Router , Routes , Route } from 'react-router-dom'
@@ -21,6 +22,7 @@ function App() {
     <Route path='/register/verify/:token' element={<VerifyEmail />}/>
     <Route path='/forgotpassword' element={<Forgotpassword />}/>
     <Route path='/resetpassword/:token' element={<Resetpassword />}/>
+    <Route path='/getme' element={<Getme />} />
     <Route path='/login' element={<Login />}/>    
     </Routes>
     </div>
