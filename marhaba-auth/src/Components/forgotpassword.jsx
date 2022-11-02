@@ -1,7 +1,6 @@
-import  react , {useState} from 'react';
+import {useState} from 'react';
 import image from '../assets/logo.png'
 import '../index.css'
-import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { showMessage } from './utiles/showMessage';
 

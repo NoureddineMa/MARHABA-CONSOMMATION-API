@@ -1,5 +1,4 @@
 import '../index.css'
-import * as react from 'react';
 import background from '../assets/background.png';
 
 

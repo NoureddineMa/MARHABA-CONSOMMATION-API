@@ -1,10 +1,10 @@
-import  react , {useState} from 'react';
+import {useState} from 'react';
 import image from '../assets/logo.png'
 import '../index.css'
-import { Link , useNavigate , useParams} from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import { showMessage } from './utiles/showMessage';
-
+import jwtDecode from 'jwt-decode';
 
 
 
@@ -34,19 +34,16 @@ const  Login = () =>  {
         }
         try {
             const result = await axios.post(API_URL , user)
-            // const tok = result.data.token
-            // console.log(result.data)
+            console.log(result.data);
             const token = result.data
-            localStorage.setItem("token", token);
+            localStorage.setItem("token", token)
             setError(false)
             // setTimeout(() => {
             //     navigate('/register')
             // }, 3000);
           } catch (error) {
-            // console.log(error.response.data.message)
             setMessage(error.response.data.message)
             setError(true)
-            
           }
       }
 

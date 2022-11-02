@@ -15,8 +15,6 @@ function App() {
     <Router>
     <div className='flex w-full h-screen' >
     <div className='w-full flex items-center justify-center lg:w-1/2' style={{backroundColor:'red'}}>
-
-    
     <Routes>  
     <Route path='/*' element={<PageNotFound />} />
     <Route path='/register' element={<Register />}/>

@@ -1,5 +1,3 @@
-import * as react from 'react';
-
 export const showMessage = ( isError , msg) => {
 
     return (

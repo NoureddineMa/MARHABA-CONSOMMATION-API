@@ -7,7 +7,7 @@ import axios from 'axios' ;
 function VerifyEmail () {
 
     const navigate = useNavigate();
-    const {token} = useParams();
+    const { token } = useParams();
     const [succes , setSucces] = useState("")
 
     useEffect(() => {

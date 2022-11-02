@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import  {useState} from 'react';
 import image from '../assets/logo.png'
 import '../index.css'
 import { Link   } from 'react-router-dom'
@@ -14,8 +14,6 @@ const Register = () => {
     const [role, setRole]  = useState("")
     const [Succes, setMessage] = useState(false)
     const [isError, setIsError] = useState(false)
-
-
 
       const handleName = (e)=>{
         return setName(e.target.value)
@@ -62,6 +60,7 @@ const Register = () => {
       }
 
     return (
+      
         <div 
         className='bg-gray-50 px-20 py-5 shadow-xl   rounded-2xl border-2 animate__animated animate__zoomIn border-gray-200 flex flex-col place-items-center'>
         <img 
