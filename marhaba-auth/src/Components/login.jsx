@@ -30,8 +30,9 @@ const  Login = () =>  {
         }
         try {
             const result = await axios.post(API_URL , user)
-            console.log(result.data);
-            const token = result.data
+            const token = result.data.token
+            const role = result.data.nameRole
+            localStorage.setItem("role", role)
             localStorage.setItem("token", token)
             setError(false)
             // setTimeout(() => {
