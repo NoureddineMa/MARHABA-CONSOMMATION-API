@@ -5,9 +5,7 @@ import Forgotpassword from './Components/forgotpassword'
 import VerifyEmail from './Components/auth/verifyEmail'
 import Resetpassword from './Components/ResetPassword'
 import PageNotFound from './Components/no results/404'
-import GetClientProfile from './Components/dashboard/GetClientProfile'
-import GetLivreurProfile from './Components/dashboard/getLivreurProfile'
-import GetManagerProfie from './Components/dashboard/getManagerProfile'
+import GetUserProfile from './Components/dashboard/getUserProfile'
 
 
 import './index.css'
@@ -28,14 +26,11 @@ function App() {
       <Route path='/forgotpassword' element={<Forgotpassword />}/>
       <Route path='/resetpassword/:token' element={<Resetpassword />}/>
       </Route>
-      <Route path='/GetClient' element={<GetClientProfile />} />
-      <Route path='/GetLivreur' element={<GetLivreurProfile />} /> 
-      <Route path='/getManager' element={<GetManagerProfie />} />
+      <Route path='/me' element={<GetUserProfile />} />
     </Routes>
     </div>
     </Router>
   )
 }
-
 
 export default App;

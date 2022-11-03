@@ -9,6 +9,7 @@ function GetClient() {
 
     const getManagerHandler =  () => {
     const token = localStorage.getItem("token")    
+    const role = localStorage.getItem("role")
     // console.log(token);
     const config = {
         headers: {
@@ -16,26 +17,22 @@ function GetClient() {
         },
         withCredentials: true
       }
-    const API_URL = "http://localhost:7000/api/user/manager/me/"
+    const API_URL = `http://localhost:7000/api/user/${role}/me/`
      axios.get(API_URL,config).then((response) => {
         // retrieve UserName:
-        console.log(response.data.message)
         setMessage(response.data.message)
         setSucces(true)})
         .catch((err) => {
-          console.log(err.response.data.message);
           setMessage(err.response.data.message)
           setSucces(false)
     })
     }
     getManagerHandler()
     return (
-      <div className=''>
+      <div className='items-center justify-center'>
          <p> { succes && message }</p>
          <p> {!succes && message}</p>
       </div>
     )
 }
-
-
 export default GetClient
