@@ -35,9 +35,7 @@ const  Login = () =>  {
             localStorage.setItem("role", role)
             localStorage.setItem("token", token)
             setError(false)
-            // setTimeout(() => {
-            //     navigate('/register')
-            // }, 3000);
+            navigate('/me')
           } catch (error) {
             setMessage(error.response.data.message)
             setError(true)
