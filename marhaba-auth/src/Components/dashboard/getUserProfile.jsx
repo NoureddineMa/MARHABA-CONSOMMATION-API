@@ -10,6 +10,7 @@ function GetClient() {
     const getManagerHandler =  () => {
     const token = localStorage.getItem("token")    
     const role = localStorage.getItem("role")
+
     // console.log(token);
     const config = {
         headers: {
@@ -23,8 +24,8 @@ function GetClient() {
         setMessage(response.data.message)
         setSucces(true)})
         .catch((err) => {
-          setMessage(err.response.data.message)
-          setSucces(false)
+            setMessage(err.response.data.message)
+            setSucces(false)
     })
     }
     getManagerHandler()

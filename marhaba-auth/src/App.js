@@ -13,6 +13,9 @@ import './index.css'
 import {BrowserRouter as Router , Routes , Route } from 'react-router-dom'
 
 function App() {
+
+
+  const role = localStorage.getItem("role")
  
   return (
     <Router>
@@ -26,7 +29,7 @@ function App() {
       <Route path='/forgotpassword' element={<Forgotpassword />}/>
       <Route path='/resetpassword/:token' element={<Resetpassword />}/>
       </Route>
-      <Route path='/me' element={<GetUserProfile />} />
+      <Route path='/me'  element={ role ? (<GetUserProfile />) : <PageNotFound />} />
     </Routes>
     </div>
     </Router>

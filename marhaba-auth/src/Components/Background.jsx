@@ -21,5 +21,4 @@ export default function form() {
             </span> <br /> Join The  FastestGrowing Driver Community! </p>
             </div>
         </>
-)
-}
+)}
