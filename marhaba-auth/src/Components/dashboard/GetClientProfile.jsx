@@ -8,7 +8,7 @@ import { useState } from 'react'
 function GetClient() {
 
   const [message,setMessage] = useState("")
-  const [error, setError] = useState(false)
+  const [succes, setSucces] = useState(false)
 
     const getClientHandler =  () => {
     const token = localStorage.getItem("token")    
@@ -21,19 +21,21 @@ function GetClient() {
       }
     const API_URL = "http://localhost:7000/api/user/client/me/"
      axios.get(API_URL,config).then((response) => {
-        console.log(response.data.message)
-        setMessage(response.data.message)
-        setError(false)
-    }).catch((err) => {
+      console.log(response.data.message)
+      setMessage(response.data.message)
+      setSucces(true)})
+      .catch((err) => {
         console.log(err.response.data.message);
         setMessage(err.response.data.message)
-        setError(true)
-
+        setSucces(false)
     })
     }
     getClientHandler()
     return (
-        <div>{message}</div>
+      <div className=''>
+         <p> { succes && message }</p>
+         <p> {!succes && message}</p>
+      </div>
     )
 
 }

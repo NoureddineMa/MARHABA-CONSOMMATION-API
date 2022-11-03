@@ -45,7 +45,6 @@ const Register = () => {
           adresse,
           role
         }
-       
        try {
          const result = await axios.post(API_URL , user)
          console.log(result.data.message)
@@ -54,15 +53,13 @@ const Register = () => {
         //  )
        } catch (error) {
          console.log(error.response.data.message)
-        //  setMessage(error.response.data.message)
-        //  isError(true)
+         setIsError(error.response.data.message)
+         isError(true)
        }
       }
-
     return (
-      
         <div 
-        className='bg-gray-50 px-20 py-5 shadow-xl   rounded-2xl border-2 animate__animated animate__zoomIn border-gray-200 flex flex-col place-items-center'>
+        className='bg-gray-50 px-20 py-2 shadow-xl   rounded-2xl border-2 animate__animated animate__zoomIn border-gray-200 flex flex-col place-items-center'>
         <img 
         src={image}  
         alt="img" 

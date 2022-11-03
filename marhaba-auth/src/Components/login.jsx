@@ -23,7 +23,6 @@ const  Login = () =>  {
       }
 
       const API_URL = "http://localhost:7000/api/auth/login"
-
       const loginHandler = async () => {
         const user = {
             email,
@@ -46,7 +45,7 @@ const  Login = () =>  {
 
     return (
         <div 
-        className='bg-gray-50 px-20 py-5 shadow-xl  rounded-2xl border-2 animate__animated animate__zoomIn     border-gray-200 flex flex-col place-items-center'>
+        className='bg-gray-50 px-20 py-8  shadow-xl  rounded-2xl border-2 animate__animated animate__zoomIn     border-gray-200 flex flex-col place-items-center'>
 
         <img
         src={image} 
@@ -79,7 +78,7 @@ const  Login = () =>  {
         value={email}
         onChange={handleEmail}
         required 
-        className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1 text-gray-90placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="EnteYour email address" />
+        className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-3 my-1 text-gray-90placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="EnteYour email address" />
 
         <label 
         for="password" 
@@ -93,7 +92,7 @@ const  Login = () =>  {
         type="password" 
         value={password}
         onChange={handlePassword}
-        className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter a password" />
+        className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-3 my-1 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter a password" />
         </div>
                 
         <div 

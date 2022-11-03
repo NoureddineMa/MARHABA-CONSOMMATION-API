@@ -19,20 +19,19 @@ function App() {
   return (
     <Router>
     <div className='flex w-full h-screen' >
-    <div className='w-full flex items-center justify-center lg:w-1/2' style={{backroundColor:'red'}}>
     <Routes>  
-    <Route path='/*' element={<PageNotFound />} />
-    <Route path='/register' element={<Register />}/>
-    <Route path='/register/verify/:token' element={<VerifyEmail />}/>
-    <Route path='/forgotpassword' element={<Forgotpassword />}/>
-    <Route path='/resetpassword/:token' element={<Resetpassword />}/>
-    <Route path='/GetClient' element={<GetClientProfile />} />
-    <Route path='/GetLivreur' element={<GetLivreurProfile />} />
-    <Route path='/getManager' element={<GetManagerProfie />} />
-    <Route path='/login' element={<Login />}/>    
+      <Route path='/*' element={<PageNotFound />} />
+      <Route element={<Background />}>
+        <Route path='/register' element={<Register />}/>
+        <Route path='/login' element={<Login />}/>    
+        <Route path='/register/verify/:token' element={<VerifyEmail />}/>
+      <Route path='/forgotpassword' element={<Forgotpassword />}/>
+      <Route path='/resetpassword/:token' element={<Resetpassword />}/>
+      </Route>
+      <Route path='/GetClient' element={<GetClientProfile />} />
+      <Route path='/GetLivreur' element={<GetLivreurProfile />} /> 
+      <Route path='/getManager' element={<GetManagerProfie />} />
     </Routes>
-    </div>
-    <Background />
     </div>
     </Router>
   )
