@@ -30,21 +30,21 @@ const  Login = () =>  {
         }
         try {
             const result = await axios.post(API_URL , user)
+            console.log(result);
             const token = result.data.token
             const role = result.data.nameRole
             localStorage.setItem("role", role)
             localStorage.setItem("token", token)
             setError(false)
-            navigate('/me')
+            navigate('/dashboard')
           } catch (error) {
             setMessage(error.response.data.message)
             setError(true)
           }
       }
-
     return (
         <div 
-        className='bg-gray-50 px-20 py-8  shadow-xl  rounded-2xl border-2 animate__animated animate__zoomIn     border-gray-200 flex flex-col place-items-center'>
+        className='bg-gray-50 px-20 py-8  shadow-xl  rounded-2xl border-2  animate__animated animate__zoomIn    border-gray-200 flex flex-col place-items-center'>
 
         <img
         src={image} 
@@ -98,17 +98,8 @@ const  Login = () =>  {
         className='flex flex-row place-items-center justify-between mt-3'>
         <div 
         className="flex items-center mb-4">
-        <input 
-        id="default-checkbox" 
-        type="checkbox" 
-        value="" 
-        className="w-4 h-4 text-fuchsia-600 bg-gray-100 rounded border-gray-300 focus:ring-fuchsia-500 dark:focus:ring-fuchsia-600 dark:ring-offset-fuchsia-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
 
 
-        <label 
-        for="default-checkbox" 
-        className="ml-2 text-sm font-medium text-dark">Remember me
-        </label>
         </div>
         <div 
         className='flex  flex-col   align-items-center justify-content-center'>

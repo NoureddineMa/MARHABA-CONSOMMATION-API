@@ -4,7 +4,7 @@ import image from '../../assets/NotFound.png'
 
 function function404() {
   return (
-    <div>
+    <div className='mx-auto'>
       <img src={image} alt="" />
     </div>
   )

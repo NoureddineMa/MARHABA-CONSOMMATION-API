@@ -14,3 +14,21 @@ body {
 .text-perso {
     font-size: 9px;
 }
+span {
+    color: blueviolet;
+}
+.marhaba {
+    color:#FA8521;
+}
+.navbar {
+    background-color: blueviolet;
+}
+.started {
+    background-color:#FA8521;
+}
+.User {
+    color: #FA8521;
+}
+.Login{
+    background-color: #FA8521;
+}

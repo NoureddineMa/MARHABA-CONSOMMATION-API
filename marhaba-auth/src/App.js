@@ -5,35 +5,34 @@ import Forgotpassword from './Components/forgotpassword'
 import VerifyEmail from './Components/auth/verifyEmail'
 import Resetpassword from './Components/ResetPassword'
 import PageNotFound from './Components/no results/404'
-import GetUserProfile from './Components/dashboard/getUserProfile'
-
-
+import GetUser from './Components/dashboard/getUserProfile'
+import Dashboard from './Components/dashboard/dashboard'
+import Homepage  from './Components/HeroSection/homepage'
 import './index.css'
 
-import {BrowserRouter as Router , Routes , Route } from 'react-router-dom'
+import {BrowserRouter as Router  ,  Routes , Route, Navigate   } from 'react-router-dom'
 
 function App() {
-
-
   const role = localStorage.getItem("role")
- 
   return (
     <Router>
     <div className='flex w-full h-screen' >
     <Routes>  
+    <Route path='/' element={<Homepage />} />
       <Route path='/*' element={<PageNotFound />} />
       <Route element={<Background />}>
         <Route path='/register' element={<Register />}/>
         <Route path='/login' element={<Login />}/>    
         <Route path='/register/verify/:token' element={<VerifyEmail />}/>
-      <Route path='/forgotpassword' element={<Forgotpassword />}/>
-      <Route path='/resetpassword/:token' element={<Resetpassword />}/>
+        <Route path='/forgotpassword' element={<Forgotpassword />}/>
+        <Route path='/resetpassword/:token' element={<Resetpassword />}/>
       </Route>
-      <Route path='/me'  element={ role ? (<GetUserProfile />) : <PageNotFound />} />
+      <Route path='/dashboard' element={<Dashboard />}>
+      <Route path='me'  element={ role ? (<GetUser />) : <Navigate to="/login" />  }/>
+      </Route>
     </Routes>
     </div>
     </Router>
   )
 }
-
 export default App;
