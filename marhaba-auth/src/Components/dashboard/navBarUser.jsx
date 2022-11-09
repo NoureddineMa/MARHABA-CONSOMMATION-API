@@ -1,9 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Image from  '../../assets/logo.png'
+import { Link , useNavigate } from 'react-router-dom'
+import Image from  '../../assets/favlogo.png'
+import Logout from '../logout'
+
 
 function navBarUser() {
 
+ 
   const User = localStorage.getItem("User")
 
   return (
@@ -13,11 +16,11 @@ function navBarUser() {
     <div className="flex flex-wrap justify-between items-center">
       <div className="flex justify-start items-center">
         <a href="https://flowbite.com" className="flex mr-4">
-          <img src= {Image} className="mr-3 h-8" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap User px-10">MARHABA LIVRAISON</span>
+          <img src= {Image} className="mr-3 h-8 ml-20" />
+          <span className="self-center text-2xl font-semibold whitespace-nowrap User px-3">MARHABA LIVRAISON</span>
         </a>
       </div>
-      <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white border-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  py-2.5 text-center inline-flex items-center px-10 " type="button">{User} <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+      <button id="dropdownDefault" data-dropdown-toggle="dropdown" class="text-white border-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  py-2.5 text-center inline-flex items-center px-10 " type="button">{User} <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
 {/* <!-- Dropdown menu --> */}
 <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700">
     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
@@ -27,9 +30,7 @@ function navBarUser() {
       <li>
         <Link to="/dashboard/me" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Profile </Link>
       </li>
-      <li>
-        <Link to="" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logout </Link>
-      </li>
+      <Logout />
     </ul>
 </div>
     </div>

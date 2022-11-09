@@ -1,17 +1,22 @@
-// import React from 'react'
+import React from 'react'
+import { Link , useNavigate } from 'react-router-dom'
 
-// function logout() {
 
-//     // function Logout(){
-//     //         localStorage.clear();
-//     // }
+function  Logout() {
 
 
 
-//   return (
-//     <div> <button onClick={Logout()}>logout</button>
-//     </div>
-//   )
-// }
+    const  navigate = useNavigate();
 
-// export default logout
+    function  ClearLocalStorage() {
+        localStorage.clear();  
+    }
+    
+  return (
+    <div> 
+          <Link to='/login' onClick={ClearLocalStorage}>logout</Link>
+    </div>
+  )
+}
+
+export default Logout

@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 export default function form() {
     return (
         <>
-    <div className='w-full flex items-center justify-center lg:w-1/2' style={{backroundColor:'red'}}>
+    <div className='w-full flex items-center justify-center lg:w-1/2'>
 
                 <Outlet />
     </div>

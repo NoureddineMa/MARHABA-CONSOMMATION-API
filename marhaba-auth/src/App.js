@@ -8,6 +8,7 @@ import PageNotFound from './Components/no results/404'
 import GetUser from './Components/dashboard/getUserProfile'
 import Dashboard from './Components/dashboard/dashboard'
 import Homepage  from './Components/HeroSection/homepage'
+import img from './assets/bak.png'
 import './index.css'
 
 import {BrowserRouter as Router  ,  Routes , Route, Navigate   } from 'react-router-dom'
@@ -16,7 +17,7 @@ function App() {
   const role = localStorage.getItem("role")
   return (
     <Router>
-    <div className='flex w-full h-screen' >
+    <div className='flex w-full h-screen '  style={{backgroundImage: `url(${img})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'center',}}>
     <Routes>  
     <Route path='/' element={<Homepage />} />
       <Route path='/*' element={<PageNotFound />} />
