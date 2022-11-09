@@ -2,7 +2,6 @@ import React from 'react'
 import livreur from '../../assets/HomePage.png';
 import '../../index.css'
 import {Link} from 'react-router-dom'
-import logo from '../../assets/logo.png';
 
 
 
@@ -55,8 +54,6 @@ function homepage() {
       <img src={livreur} alt="mockup" />
     </div>                
   </div>
-
   )
 }
-
 export default homepage

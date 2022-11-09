@@ -21,11 +21,9 @@ function GetUser() {
         },
         withCredentials: true
       }
-    const API_URL = `http://localhost:7000/api/user/${role}/me/`
-     axios.get(API_URL,config).then((response) => {
-        // retrieve UserName:
-        const UserName = response.data.user.name
-        localStorage.setItem("User", UserName)
+        const API_URL = `http://localhost:7000/api/user/${role}/me/`
+        axios.get(API_URL,config).then((response) => {
+        // retrieve UserName: 
         setUserName(response.data.user.name)
         setMessage(response.data.message)
         setRole(role)

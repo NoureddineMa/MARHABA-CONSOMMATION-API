@@ -8,7 +8,6 @@ function Dashboard() {
 
 
   const Name = localStorage.getItem("User")
-  console.log(Name);
   const Role = localStorage.getItem("role")
 
   return (

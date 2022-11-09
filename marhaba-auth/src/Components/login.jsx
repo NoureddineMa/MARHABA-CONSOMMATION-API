@@ -30,11 +30,12 @@ const  Login = () =>  {
         }
         try {
             const result = await axios.post(API_URL , user)
-            console.log(result);
             const token = result.data.token
             const role = result.data.nameRole
+            const Username = result.data.user.name
             localStorage.setItem("role", role)
             localStorage.setItem("token", token)
+            localStorage.setItem("User", Username)
             setError(false)
             navigate('/dashboard')
           } catch (error) {
