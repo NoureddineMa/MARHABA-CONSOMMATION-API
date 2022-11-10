@@ -7,7 +7,6 @@ function  Logout() {
 
 
     const  navigate = useNavigate();
-
     function  ClearLocalStorage() {
         localStorage.clear();  
     }
