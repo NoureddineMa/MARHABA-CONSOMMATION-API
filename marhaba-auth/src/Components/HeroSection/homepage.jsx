@@ -41,8 +41,8 @@ function homepage() {
 
     <div className=" text-center  place-self-center lg:col-span-12 " 
     >
-      <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl marhaba ">MARHABA <span className='span font-extrabold'>RESTAURANT</span> </h1>
-      <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 text-sm dark:text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac diam in justo commodo eleifend. Cras condimentum ligula mi, eget suscipit ipsum porta sed. Aenean id mauris accumsan, fringilla libero et, bibendum nisl. Nulla vulputate metus vitae consectetur pretium. Sed eget ante id velit hendrerit vulputate. .</p>
+      <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl marhaba  ">MARHABA <span className='span font-extrabold'>RESTAURANT</span> </h1>
+      <p className="max-w-2xl mb-6  text-gray-500 lg:mb-8 text-base font-medium dark:text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac diam in justo commodo eleifend. Cras condimentum ligula mi, eget suscipit ipsum porta sed. Aenean id mauris accumsan, fringilla libero et, bibendum nisl. Nulla vulputate metus vitae consectetur pretium. Sed eget ante id velit hendrerit vulputate. .</p>
       <Link to="/login" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-violet-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 dark:text-white Login">
        Login
       </Link>
@@ -50,9 +50,6 @@ function homepage() {
         Register
       </Link> 
     </div>
-    {/* <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-      <img src={livreur} alt="mockup" />
-    </div>                 */}
   </div>
   )
 }

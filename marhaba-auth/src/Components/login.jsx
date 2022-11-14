@@ -7,14 +7,8 @@ import { showMessage } from './utiles/showMessage';
 
 
 
+
 const  Login = () =>  {
-
-
-    
-  
-
-
-
 
     const navigate = useNavigate();
     const [email , setEmail] = useState("")
@@ -28,6 +22,7 @@ const  Login = () =>  {
       const handlePassword = (e)=>{
         return setPassword(e.target.value)
       }
+      
 
       const API_URL = "http://localhost:7000/api/auth/login"
       const loginHandler = async () => {

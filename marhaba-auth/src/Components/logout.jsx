@@ -11,10 +11,8 @@ function  Logout() {
         localStorage.clear();  
     }
     
-  return (
-    <div> 
-          <Link to='/login' onClick={ClearLocalStorage}>logout</Link>
-    </div>
+  return ( 
+          <Link className='block py-2 px-4 hover:outline outline-2  outline-offset-2 dark:hover:bg-gray-600 dark:hover:text-white' to='/login' onClick={ClearLocalStorage}>logout</Link>
   )
 }
 
