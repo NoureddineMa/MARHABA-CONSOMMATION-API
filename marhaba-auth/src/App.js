@@ -30,7 +30,6 @@ function App() {
       </Route>
       <Route path='/dashboard' element={<Dashboard />}>
       <Route path='me'  element={ role ? (<GetUser />) : <Navigate to="/login" />  }/>
-      
       </Route>
     </Routes>
     </div>

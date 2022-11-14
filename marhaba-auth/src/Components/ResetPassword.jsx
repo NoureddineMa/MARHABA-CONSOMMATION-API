@@ -57,7 +57,7 @@ const  ResetPassword = () =>  {
         className='mt-4 '>
         <div>
 
-        <p>  { message &&  showMessage( isError , message)}
+        <p className='text-white'>  { message &&  showMessage( isError , message)}
 </p>
  
         <label 

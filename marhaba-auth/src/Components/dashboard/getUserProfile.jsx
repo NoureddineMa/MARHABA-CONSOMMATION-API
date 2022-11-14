@@ -49,7 +49,7 @@ function GetUser() {
             <form className="w-3/5 mx-auto">
               <div className='flex items-center space-x-6'>
                 <div className="shrink-0 mx-auto">
-                   <img width={70} height={70} className="h-16 w-16 object-cover rounded-full my-10 " src={me} />
+                   <img  className="h-20 w-20 object-cover rounded-full my-10 " src={me} />
                 </div>
                 </div>
 
@@ -78,15 +78,20 @@ function GetUser() {
                   <select class="mt-1 px-3 py-2 bg-white border cursor-not-allowed shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 rounded-md sm:text-sm focus:ring-1 block w-full" aria-label="Disabled              select example" disabled>
                       <option selected>{Role}</option>
                  </select>
-                 <button class="bg-orange-600 hover:bg-orange-700 my-3  text-white font-bold py-2 px-10 rounded">Modify</button>
+                 <button class="bg-orange-600 hover:bg-orange-700 my-4  text-white font-bold py-2 px-10 rounded">Modify</button>
             </form>
         </div>
          {/* <p> { succes && message }</p>
          <p> {!succes && message}</p> */}
-        <div className=" dark:bg-gray-800  rounded-2xl  shadow-xl mt-20 w-2/5 h-64 animate__animated animate__zoomIn ">
-              <h2 className="text-white font-bold text-2xl tracking-wide text-center mt-5">Profile</h2>
-              <p className=" text-white  font-semibold mt-2.5  text-ce">Username : <span className='text-white font-light'>{userName}</span></p>
-              <p className=" text-white  font-semibold mt-2.5  text-ce">Role : <span className=' text-white font-light '>{Role}</span> </p>
+        <div className=" dark:bg-gray-800  rounded-2xl  shadow-xl mt-20 w-2/5  animate__animated animate__zoomIn ">
+          <h2 className="text-white font-bold text-2xl tracking-wide text-center my-16">Profile</h2>
+              <p className=" text-white text-center font-semibold my-4  text-ce">Username : <span className='text-white font-light'>{userName}</span></p>
+              <p className=" text-white text-center  font-semibold my-4  text-ce">Role : <span className=' text-white font-light '>{Role}</span> </p>
+              <p className=" text-white text-center  font-semibold my-4  text-ce">Adresse : <span className=' text-white font-light '>{Adresse}</span> </p>
+              <p className=" text-white text-center  font-semibold my-4  text-ce">Phone : <span className=' text-white font-light '>{Phone}</span> </p>
+              <p className=" text-white text-center  font-semibold my-4  text-ce">Email : <span className=' text-white font-light '>{Email}</span> </p>
+
+
         </div>
 </div>
     )

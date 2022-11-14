@@ -24,13 +24,13 @@ function navBarUser() {
 <div iclass="  z-10 w-44 bg-white rounded  divide-gray-100 shadow dark:bg-gray-700">
     <ul class="py-1 text-sm text-gray-700 flex items-stretch dark:text-gray-200" aria-labelledby="dropdownDefault">
       <li>
-          <Link to="/dashboard" class="block py-2 px-4 dark:hover:outline-gray-600 dark:hover:text-white" type="button">{User} </Link> 
+          <Link to="/dashboard" class="block py-2 px-4  dark:hover:text-white" type="button">{User} </Link> 
       </li>
       <li>
-        <Link to="/dashboard" class="block py-2 px-4  dark:hover:bg-gray-600 dark:hover:text-white">Dashboard </Link>
+        <Link to="/dashboard" class="block py-2 px-4   dark:hover:text-white">Dashboard </Link>
       </li>
       <li>
-        <Link to="/dashboard/me" class="block py-2 px-4  dark:hover:bg-gray-600 dark:hover:text-white">Profile</Link>
+        <Link to="/dashboard/me" class="block py-2 px-4   dark:hover:text-white">Profile</Link>
       </li>
       <li>
       <Logout />
