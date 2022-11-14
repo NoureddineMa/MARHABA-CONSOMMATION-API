@@ -10,19 +10,25 @@ import { showMessage } from './utiles/showMessage';
 
 const  Login = () =>  {
 
+
+    
+
     const navigate = useNavigate();
     const [email , setEmail] = useState("")
     const [password , setPassword] = useState("")
     const [Message, setMessage] = useState("")
     const [Error , setError] = useState(false);
-   
+    const [ErrorInput , setErrorInput ] = useState(false)
+
+  
     const handleEmail = (e)=>{
         return setEmail(e.target.value)
       }
       const handlePassword = (e)=>{
         return setPassword(e.target.value)
       }
-      
+
+    
 
       const API_URL = "http://localhost:7000/api/auth/login"
       const loginHandler = async () => {
@@ -44,6 +50,12 @@ const  Login = () =>  {
             setMessage(error.response.data.message)
             setError(true)
           }
+
+          if(!email  && !password){
+            setErrorInput(true)
+            return false;
+           }
+            
       }
     return (
         <div 
@@ -80,7 +92,9 @@ const  Login = () =>  {
         value={email}
         onChange={handleEmail}
         required 
-        className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-3 my-1 text-gray-90placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="EnteYour email address" />
+        className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-3 my-1 text-gray-90placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter your email address" />
+
+       { ErrorInput && !email && <span className='msgError'>please enter a  email</span>}
 
         <label 
         for="password" 
@@ -95,6 +109,7 @@ const  Login = () =>  {
         value={password}
         onChange={handlePassword}
         className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-3 my-1 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter a password" />
+        { ErrorInput && !password && <span className='msgError'>please enter a  password</span>}
         </div>
                 
         <div 
