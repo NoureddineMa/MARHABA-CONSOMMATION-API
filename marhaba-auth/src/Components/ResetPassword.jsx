@@ -2,7 +2,7 @@ import {useState} from 'react';
 import image from '../assets/logo.png'
 import '../index.css'
 import axios from 'axios';
-import {useParams , useNavigate } from 'react-router-dom';
+import {useParams , useNavigate , Link } from 'react-router-dom';
 import { showMessage } from './utiles/showMessage';
 
 
@@ -13,6 +13,7 @@ const  ResetPassword = () =>  {
     const [password , setPassword] = useState("");
     const [message , setMessage] = useState("");
     const [isError , setIsError] = useState(false)
+    const [errorInput , setErrorInput] = useState(false)
 
     const handleEmail = (e) => {
         return setPassword(e.target.value)
@@ -30,14 +31,15 @@ const  ResetPassword = () =>  {
         const result = await axios.post(API_URL, user)
         setMessage(result.data.message)
         setIsError(false)
-        setTimeout(() => { navigate('/login') }, 2000);
+       
      } catch (error) {
         console.log(error)
         setIsError(true)
-        
-     
      }
 
+     if (!password )
+        setErrorInput(true)
+        return true;
     }
 
     return (
@@ -74,18 +76,22 @@ const  ResetPassword = () =>  {
         required 
         class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1 text-gray-90placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter Your new Password " />
 
+        {errorInput && !password && <span className='msgError'>Password Required</span>}
+
 
         <label 
-        for="Password" 
+        for="NewPassword" 
         className='text-xs font-medium'>Confirm Password
         </label>
         <input 
-        id="Password" 
-        name="Password" 
-        type="Password" 
-        autocomplete="Password" 
+        id="NewPassword" 
+        name="NewPassword" 
+        type="password" 
+        autocomplete="NewPassword" 
         required 
         class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1 text-gray-90placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="confirm Password " />
+                {errorInput && !password && <span className='msgError'>Password Required</span>}
+
 
         </div>
 
@@ -97,6 +103,12 @@ const  ResetPassword = () =>  {
         className='text-sm active:scale-[.98]  active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3 bg-fuchsia-700 text-white  font-bold rounded-xl' 
         onClick={resetPassword}>Reset password 
         </button>
+        <button className=' active:scale-[.98]  active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3 bg-orange-500 text-white  font-bold rounded-xl'>
+        <Link  to="/login" className='text-sm'>
+            go to page login
+        </Link>
+        </button>
+        
         </div>
         </div>
         </div>

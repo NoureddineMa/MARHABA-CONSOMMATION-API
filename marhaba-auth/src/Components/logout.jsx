@@ -12,7 +12,7 @@ function  Logout() {
     }
     
   return ( 
-          <Link className='block py-2 px-4  outline-offset-2  dark:hover:text-white' to='/login' onClick={ClearLocalStorage}>
+          <Link className='block py-2 px-4  outline-offset-2  dark:hover:text-white' to='/login' onClick={ClearLocalStorage}>  
           <svg width={20} height={20  } viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
   <rect width={100} height={100} fill="url(#pattern0)" />
   <defs>

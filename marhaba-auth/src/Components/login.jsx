@@ -19,7 +19,6 @@ const  Login = () =>  {
     const [Message, setMessage] = useState("")
     const [Error , setError] = useState(false);
     const [ErrorInput , setErrorInput ] = useState(false)
-
   
     const handleEmail = (e)=>{
         return setEmail(e.target.value)
@@ -80,10 +79,8 @@ const  Login = () =>  {
         className='mt-4 '>
         <div>
  
-        <label 
-        for='email'
-        className='text-xs font-medium'>Email
-        </label>
+       <label htmlFor="email" classname="text-xs font-medium">Email</label>
+
         <input 
         id="email" 
         name="email" 
@@ -97,7 +94,7 @@ const  Login = () =>  {
        { ErrorInput && !email && <span className='msgError'>please enter a  email</span>}
 
         <label 
-        for="password" 
+        htmlFor="password" 
         className='text-xs font-medium'>password
         </label>
         <input 

@@ -15,6 +15,7 @@ const Register = () => {
     const [Succes, setMessage] = useState(false)
     const [isError, setIsError] = useState(false)
 
+
       const handleName = (e)=>{
         return setName(e.target.value)
       }
@@ -49,14 +50,16 @@ const Register = () => {
          const result = await axios.post(API_URL , user)
          console.log(result.data.message)
          setMessage(result.data.message)
-         isError(false);
+         setIsError(false);
         //  )
        } catch (error) {
          console.log(error.response.data.message)
-         setIsError(error.response.data.message)
-         isError(true)
+         setMessage(error.response.data.message)
+         setIsError(true)
        }
       }
+
+      
     return (
         <div 
         className='bg-gray-50 px-20 py-2 shadow-xl   rounded-2xl border-2 animate__animated animate__zoomIn border-gray-200 flex flex-col place-items-center'>
@@ -67,14 +70,14 @@ const Register = () => {
         <h1 
         className='mt-2 text-center text-3xl font-bold tracking-tight text-fuchsia-900'>Create your account
         </h1>
-        { Succes &&  showMessage( isError , Succes)}
+        { Succes &&  showMessage( isError ,  Succes )}
         <div 
         className='mt-4 '>
         <div>
 
         {/* input Name:*/}
         <label 
-        for="name" 
+        htmlFor="name" 
         className='text-xs font-medium'>Name
         </label>
 
@@ -87,12 +90,14 @@ const Register = () => {
         required 
         className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1  text-gray-900 placeholder-gray-500 focus:z-10 focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm " 
         placeholder="Enter Your Name" />
+
+
         {/* end input Name  */}
 
 
         {/* input email */}
         <label 
-        for="email" 
+        htmlFor="email" 
         className='text-xs font-medium'>Email
         </label>
         <input 
@@ -108,7 +113,7 @@ const Register = () => {
 
         {/* inut password */}
         <label 
-        for="password" 
+        htmlFor="password" 
         className='text-xs font-medium'>password
         </label>
         <input 
@@ -126,7 +131,7 @@ const Register = () => {
 
         {/* input Phone */}
         <label 
-        for="phone" 
+        htmlFor="phone" 
         className='text-xs font-medium'>Phone
         </label>
 
@@ -145,7 +150,7 @@ const Register = () => {
 
         {/* adresse input  */}
         <label 
-        for="Adresse" 
+        htmlFor="Adresse" 
         className='text-xs font-medium'>Adresse
         </label>
 

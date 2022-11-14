@@ -10,6 +10,7 @@ const Forgotpassword = () => {
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
     const [isError, setError] = useState(false)
+    const [ErrorInput , setErrorInput] = useState(false)
 
     const handleEmail = (e)=>{
         return setEmail(e.target.value)
@@ -24,12 +25,14 @@ const Forgotpassword = () => {
         try {
            const result = await axios.post(API_URL , user)
            setMessage(result.data.message)
-            // setTimeout(() => {
-            //     navigate('/register')
-            // }, 3000);
           } catch (error) {
             setMessage(error.response)
             setError(true)
+          }
+
+          if(!email){
+            setErrorInput(true)
+            return false
           }
       }
 
@@ -67,6 +70,8 @@ const Forgotpassword = () => {
         onChange={handleEmail}
         required 
         class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 my-1 text-gray-90placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="Enter Your email " />
+
+        {ErrorInput && !email && <span className='msgError'> Please add your email </span>}
         </div>
                 
         <div 
