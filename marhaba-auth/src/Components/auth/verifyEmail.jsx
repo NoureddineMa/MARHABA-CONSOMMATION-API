@@ -32,7 +32,7 @@ function VerifyEmail() {
     <div className="bg-gray-50 px-20 py-5 shadow-xl  rounded-2xl border-2 animate__animated animate__zoomIn     border-gray-200 flex flex-col place-items-center">
       <img src={image} alt="img" className="logo" />
 
-      <h1 className="mt-2 mb-2 text-center text-3xl font-bold tracking-tight text-fuchsia-900">
+      <h1 className="mt-2 mb-2 text-center text-3xl font-bold tracking-tight text-white-900">
         Verified mail
       </h1>
 
@@ -41,7 +41,7 @@ function VerifyEmail() {
           className="p-2 bg-green-700 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
           role="alert"
         >
-          <span className="font-sm mr-2 text-left flex-auto">{succes}</span>
+          <span className="font-sm mr-2 text-left text-white flex-auto">{succes}</span>
 
           <svg
             className="fill-current opacity-75 h-4 w-4"

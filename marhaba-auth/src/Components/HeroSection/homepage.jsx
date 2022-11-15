@@ -41,12 +41,12 @@ function homepage() {
 
     <div className=" text-center  place-self-center lg:col-span-12 " 
     >
-      <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-10xl text-white  ">MARHABA RESTAURANT </h1>
-      <p className="max-w-2xl mb-6  text-gray-500 lg:mb-8 text-base font-medium dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac diam in justo commodo eleifend. Cras condimentum ligula mi, eget suscipit ipsum porta sed. Aenean id mauris accumsan, fringilla libero et, bibendum nisl. Nulla vulputate metus vitae consectetur pretium. Sed eget ante id velit hendrerit vulputate. .</p>
-      <Link to="/login" className="inline-flex items-center justify-center px-5 hover:shadow-lg  hover:scale-110 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 dark:text-white Login">
+      <p className="max-w-2xl mb-4 text-8xl  text-center font-extrabold tracking-tight leading-none md:text-10xl xl:text-10xl text-white  ">MARHABA  RESTAURANT </p>
+      <p   className="max-w-2xl mb-6  text-gray-500 lg:mb-8 text-base font-medium dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac diam in justo commodo eleifend. Cras condimentum ligula mi, eget suscipit ipsum porta sed. Aenean id mauris accumsan, fringilla libero et, bibendum nisl. Nulla vulputate metus vitae consectetur pretium. Sed eget ante id velit hendrerit vulputate. .</p>
+      <Link to="/login" className="inline-flex items-center justify-center px-8 hover:shadow-lg  hover:scale-110 py-3  mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 dark:text-white Login">
        Login
       </Link>
-      <Link to="/register" className=" register inline-flex items-center justify-center  hover:scale-110 hover:shadow-lg px-5 py-3 text-base font-medium text-center bg-violet-800 rounded-lg focus:ring-4 ">
+      <Link to="/register" className=" register inline-flex items-center justify-center  hover:scale-110 hover:shadow-lg px-8 py-3 text-base font-medium text-center bg-violet-800 rounded-lg focus:ring-4 ">
         Register
       </Link> 
     </div>
