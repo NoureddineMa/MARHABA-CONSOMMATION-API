@@ -38,7 +38,7 @@ const Forgotpassword = () => {
 
     return (
         <div 
-        className='bg-gray-50 px-20 py-5 shadow-xl animate__animated animate__zoomIn rounded-2xl border-2 border-gray-200 flex flex-col place-items-center'>
+        className='bg-gray-200 px-20 py-5 shadow-xl animate__animated animate__zoomIn rounded-2xl border-2 border-gray-200 flex flex-col place-items-center'>
 
         <img
         src={image} 
@@ -46,11 +46,11 @@ const Forgotpassword = () => {
         className='logo' />
 
         <h1 
-        className='mt-2  text-center mb-5 text-3xl font-bold tracking-tight text-fuchsia-900'>Reset Password
+        className='mt-2  text-center mb-5 text-3xl font-bold tracking-tight ' style={{color:"#153462"}}>Reset Password
         </h1>
 
         <p 
-        className='text-xs text-center font-medium text-fuchsia-900'>enter your email to reset  <br />your password
+        className='text-xs text-center font-medium ' style={{color:"#153462"}}>enter your email to reset  <br />your password
         </p>
         { message && showMessage( isError , message)}
         <div 
@@ -59,7 +59,7 @@ const Forgotpassword = () => {
  
         <label 
         for="email" 
-        className='text-xs font-medium'>Email
+        className='text-xs font-medium' style={{color:"#153462"}}>Email
         </label>
         <input 
         id="email" 
@@ -77,7 +77,8 @@ const Forgotpassword = () => {
         <div 
         className='mt-8 flex flex-col gap-y-4'>
         <button
-        className='text-sm active:scale-[.98]  active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3 bg-fuchsia-700 text-white  font-bold rounded-xl' onClick={submitHandler}>
+        style={{backgroundColor:"#153462"}}
+        className='text-sm active:scale-[.98]  active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3  text-white  font-bold rounded-xl' onClick={submitHandler}>
             Send Mail
         </button>
         </div>

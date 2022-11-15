@@ -62,13 +62,13 @@ const Register = () => {
       
     return (
         <div 
-        className='bg-gray-50 px-20 py-2 shadow-xl   rounded-2xl border-2 animate__animated animate__zoomIn border-gray-200 flex flex-col place-items-center'>
+        className='bg-gray-200 px-20 py-2 shadow-xl   rounded-2xl border-2 animate__animated animate__zoomIn border-gray-200 flex flex-col place-items-center'>
         <img 
         src={image}  
         alt="img" 
         className='logo' />
         <h1 
-        className='mt-2 text-center text-3xl font-bold tracking-tight text-fuchsia-900'>Create your account
+        className='mt-2 text-center text-3xl font-bold tracking-tight ' style={{color:"#153462"}}>Create your account
         </h1>
         { Succes &&  showMessage( isError ,  Succes )}
         <div 
@@ -78,7 +78,7 @@ const Register = () => {
         {/* input Name:*/}
         <label 
         htmlFor="name" 
-        className='text-xs font-medium'>Name
+        className='text-xs font-medium' style={{color:"#153462"}}>Name
         </label>
 
         <input 
@@ -98,7 +98,7 @@ const Register = () => {
         {/* input email */}
         <label 
         htmlFor="email" 
-        className='text-xs font-medium'>Email
+        className='text-xs font-medium' style={{color:"#153462"}}>Email
         </label>
         <input 
         id="email" 
@@ -114,7 +114,7 @@ const Register = () => {
         {/* inut password */}
         <label 
         htmlFor="password" 
-        className='text-xs font-medium'>password
+        className='text-xs font-medium' style={{color:"#153462"}}>password
         </label>
         <input 
         id="password" 
@@ -132,7 +132,7 @@ const Register = () => {
         {/* input Phone */}
         <label 
         htmlFor="phone" 
-        className='text-xs font-medium'>Phone
+        className='text-xs font-medium' style={{color:"#153462"}}>Phone
         </label>
 
         <input 
@@ -151,7 +151,7 @@ const Register = () => {
         {/* adresse input  */}
         <label 
         htmlFor="Adresse" 
-        className='text-xs font-medium'>Adresse
+        className='text-xs font-medium' style={{color:"#153462"}}>Adresse
         </label>
 
         <input 
@@ -180,10 +180,10 @@ const Register = () => {
         className="mt-3 block w-full  rounded-none rounded-t-md border  px-3 py-2 text-gray-900  focus:z-10  focus:border-violet-900 focus:outline-none focus:ring-violet-900 sm:text-sm">
         <option selected>Choose your Role</option>
         <option 
-        value="client">Client
+        value="client" style={{color:"#153462"}}>Client
         </option>
         <option 
-        value="livreur">Livreur
+        value="livreur" style={{color:"#153462"}}>Livreur
         </option>
         </select>
         {/* end seelct role  */}
@@ -191,17 +191,17 @@ const Register = () => {
         <div 
         className='flex  flex-col mt-2  align-items-center justify-content-center'>
         <p 
-        className='text-perso text-black-500 text-center mb-3 mt-3  '> By clicking <span className='font-bold text-fuchsia-800'>Register</span>  you agree to Marhaba  <br/>Livraison <span className='font-semibold text-fuchsia-800 underline'>Terms</span>  and  <span className='font-semibold underline text-fuchsia-800'>Privacy Policy</span>
+        className='text-perso text-black-500 text-center mb-3 mt-3  '> By clicking <span className='font-bold ' style={{color:"#153462"}}>Register</span>  you agree to Marhaba  <br/>Livraison <span className='font-semibold  underline' style={{color:"#153462"}}>Terms</span>  and  <span className='font-semibold underline ' style={{color:"#153462"}}>Privacy Policy</span>
         </p>
         <p 
-        className='text-xs text-black-500 text-center mt-3 '>you already have an account ? <br /> <Link to="/login" className='text-fuchsia-800 underline'>click here to login</Link> 
+        className='text-xs text-black-500 text-center mt-3 '>you already have an account ? <br /> <Link to="/login" className=' underline' style={{color:"#153462"}}>click here to login</Link> 
         </p>
         </div>
                 
         <div 
         className='mt-8 flex flex-col gap-y-4'>
         <button
-        className='text-sm active:scale-[.98]  active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3 bg-fuchsia-700 text-white  font-bold rounded-xl' 
+        className='text-sm active:scale-[.98] my-2 active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3  text-white  font-bold rounded-xl' style={{backgroundColor:"#153462"}}
         onClick={registerHandler}>Sign up
         </button>
         </div>
