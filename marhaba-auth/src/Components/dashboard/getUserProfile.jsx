@@ -98,15 +98,10 @@ function GetUser() {
         <div className=" dark:bg-gray-800  rounded-2xl  shadow-xl py-7   animate__animated animate__zoomIn ">
           <div className='text-center my-10 py-10'>
          <img className='mx-auto py-10' width={40} height={40} src={Nodata}/>
-
-
-
-            <p className='text-white text-lg font-thin'>No Data Available</p>
+        <p className='text-white text-lg font-thin'>No Data Available</p>
           </div>
         </div>
          </div>
-       
-        
 </div>
     )
 }

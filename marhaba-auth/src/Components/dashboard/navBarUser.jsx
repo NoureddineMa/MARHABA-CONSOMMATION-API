@@ -4,6 +4,7 @@ import Image from  '../../assets/favlogo.png'
 import Logout from '../logout'
 
 
+
 function navBarUser() {
 
  
@@ -15,10 +16,10 @@ function navBarUser() {
     <nav className="bg-white border-gray-200 px-4  py-2.5 dark:bg-gray-800 w-screen">
     <div className="flex flex-wrap justify-between items-center">
       <div className="flex justify-start items-center">
-        <a href="https://flowbite.com" className="flex mr-4">
+        <Link to="/" className="flex mr-4">
           <img src= {Image} className="mr-3 h-8 ml-20" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap User px-3">MARHABA LIVRAISON</span>
-        </a>
+        </Link>
       </div>
 {/* <!-- Dropdown menu --> */}
 <div iclass="  z-10 w-44 bg-white rounded  divide-gray-100 shadow dark:bg-gray-700">

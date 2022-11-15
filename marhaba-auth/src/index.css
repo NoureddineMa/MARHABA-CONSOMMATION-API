@@ -32,6 +32,9 @@ span {
 .Login{
     background-color: #FA8521;
 }
+.register {
+    color: white;
+}
 .msgError {
     display: block;
 font-size: 10px;
