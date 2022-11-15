@@ -46,7 +46,7 @@ function GetUser() {
     getManagerHandler()
     return (
 <div className='flex  justify-evenly  '>
-        <div className='mt-20     dark:bg-gray-800  rounded-2xl w-2/5 py-10 shadow-xl animate__animated animate__zoomIn'>
+        <div className='mt-20       rounded-2xl w-2/5 py-10 shadow-xl animate__animated animate__zoomIn' style={{backgroundColor:"#153462"}}>
               <h1 className='User font-bold text-2xl tracking-wide text-center  mt-5'>Modify your profile</h1>
             <form className="w-3/5 mx-auto">
               <div className='flex items-center space-x-6'>
@@ -87,7 +87,7 @@ function GetUser() {
          {/* <p> { succes && message }</p>
          <p> {!succes && message}</p> */}
          <div className='w-2/5'>
-           <div className=" dark:bg-gray-800 py-10  rounded-2xl mb-10  shadow-xl mt-20  animate__animated animate__zoomIn  ">
+           <div className="  py-10  rounded-2xl mb-10  shadow-xl mt-20  animate__animated animate__zoomIn  " style={{backgroundColor:"#153462"}}>
           <h2 className="User font-bold text-2xl tracking-wide text-center my-16">Profile</h2>
               <p className=" text-white text-center font-semibold my-4  text-ce">Username : <span className='text-white font-light'>{userName}</span></p>
               <p className=" text-white text-center  font-semibold my-4  text-ce">Role : <span className=' text-white font-light '>{Role}</span> </p>
@@ -96,7 +96,7 @@ function GetUser() {
               <p className=" text-white text-center  font-semibold my-4  text-ce">Email : <span className=' text-white font-light '>{Email}</span> </p>
               
         </div>
-        <div className=" dark:bg-gray-800  rounded-2xl  shadow-xl py-7   animate__animated animate__zoomIn ">
+        <div className="   rounded-2xl  shadow-xl py-7   animate__animated animate__zoomIn " style={{backgroundColor:"#153462"}}>
           <div className='text-center my-10 py-10'>
          <img className='mx-auto py-10' width={40} height={40} src={Nodata}/>
         <p className='text-white text-lg font-thin'>No Data Available</p>

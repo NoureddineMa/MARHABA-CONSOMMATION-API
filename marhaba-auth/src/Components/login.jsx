@@ -58,7 +58,7 @@ const  Login = () =>  {
       }
     return (
         <div 
-        className='bg-gray-50 px-20 py-8  shadow-xl  rounded-2xl border-2  animate__animated animate__zoomIn    border-gray-200 flex flex-col place-items-center'>
+        className='bg-gray-200  px-20 py-8  shadow-xl  rounded-2xl border-2  animate__animated animate__zoomIn    border-gray-200 flex flex-col place-items-center'>
 
         <img
         src={image} 
@@ -66,11 +66,11 @@ const  Login = () =>  {
         className='logo' />
 
         <h1 
-        className='mt-2 mb-2 text-center text-3xl font-bold tracking-tight text-fuchsia-900'>Welcome Back
+        className='mt-2 mb-2 text-center text-3xl font-bold tracking-tight ' style={{color:"#153462"}}>Welcome Back
         </h1>
 
         <p 
-        className='text-xs font-medium text-fuchsia-900'>Welcome Back please enter your details
+        className='text-xs font-medium ' style={{color:"#153462"}}>Welcome Back please enter your details
         </p>
         
         {Message && showMessage( Error ,  Message)}
@@ -79,7 +79,7 @@ const  Login = () =>  {
         className='mt-4 '>
         <div>
  
-       <label htmlFor="email" classname="text-xs font-medium">Email</label>
+       <label htmlFor="email" classname="text-xs font-medium" style={{color:"#153462"}}>Email</label>
 
         <input 
         id="email" 
@@ -95,7 +95,7 @@ const  Login = () =>  {
 
         <label 
         htmlFor="password" 
-        className='text-xs font-medium'>password
+        className='text-xs font-medium' style={{color:"#153462"}}>password
         </label>
         <input 
         id="password" 
@@ -120,7 +120,7 @@ const  Login = () =>  {
         className='flex  flex-col   align-items-center justify-content-center'>
         <Link  
         to="/forgotpassword" 
-        className=' text-center mb-4 text-xs font-medium text-fuchsia-900'>forgot password? 
+        className=' text-center mb-4 text-xs font-medium ' style={{color:"##fb7185"}}>forgot password? 
         </Link>
         </div>
         </div>
@@ -130,14 +130,14 @@ const  Login = () =>  {
         className='text-xs text-black-500 text-center mt-3'>You dont have an account? <br /> 
         <Link 
         to="/Register" 
-        className='text-fuchsia-800 underline'>click here to Register
+        className=' underline' style={{color:"#153462"}}>click here to Register
         </Link> 
         </p>
                     
         <div 
         className='mt-8 flex flex-col gap-y-4'>
         <button
-        className='text-sm active:scale-[.98]  active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3 bg-fuchsia-700 text-white  font-bold rounded-xl'
+        className='text-sm active:scale-[.98]  active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3  text-white  font-bold rounded-xl' style={{backgroundColor:"#153462"}}
         onClick={loginHandler}>Sign in
         </button>
         </div>

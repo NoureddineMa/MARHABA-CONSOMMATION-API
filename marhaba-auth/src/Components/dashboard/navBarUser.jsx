@@ -13,7 +13,7 @@ function navBarUser() {
   return (
     <div>
     <header>
-    <nav className="bg-white border-gray-200 px-4  py-2.5 dark:bg-gray-800 w-screen">
+    <nav className="bg-white border-gray-200 px-4  py-2.5  w-screen" style={{backgroundColor:"#153462"}}>
     <div className="flex flex-wrap justify-between items-center">
       <div className="flex justify-start items-center">
         <Link to="/" className="flex mr-4">

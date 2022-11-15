@@ -5,11 +5,11 @@ function DashboardManager() {
       <div className='flex  justify-evenly  '>
 
 
-        <div className='mt-20     dark:bg-gray-800  rounded-2xl w-2/5  animate__animated animate__zoomIn '>
+        <div className='mt-20       rounded-2xl w-2/5  animate__animated animate__zoomIn ' style={{backgroundColor:"#153462"}}>
               <h1 className='text-white font-bold text-2xl  User tracking-wide text-center pl-11 mt-11'>Last 2 Commands : </h1>
 
               <div className='flex justify-between mt-11'>
-                 <div className=" p-4    m-2 rounded shadow-xl ml-11 mt-4 " style={{backgroundColor:"#153462"}}>
+                 <div className=" p-4 bg-gray-700   m-2 rounded shadow-xl ml-11 mt-4 " >
             <a className="relative block h-48 overflow-hidden rounded">
               <img  className="block h-full  object-cover object-center cursor-pointer" width={400} src="https://foodish-api.herokuapp.com/images/dessert/dessert32.jpg" />
             </a>
@@ -17,11 +17,11 @@ function DashboardManager() {
               <h3 className="title-font mb-1 text-xs tracking-widest text-white">Quantité : 300 Repas </h3>
               <h2 className="title-font text-lg font-bold text-white">Tacos Beldi. <small className='User'>Quantite X 1</small></h2>
               <p className="mt-1 text-white font-light">Price : 80 MAD</p>
-              <button className='bg-orange-500 py-2  px-7 rounded mt-5 text-white'>Command this </button>
+              <button className='bg-orange-600 py-2  px-7 rounded mt-5 text-white'>Command this </button>
             </div>
           </div>
 
-          <div className=" p-4  m-2 rounded shadow-xl mr-11 mt-4 "  style={{backgroundColor:"#153462"}}>
+          <div className=" p-4  bg-gray-700 m-2 rounded shadow-xl mr-11 mt-4  "  >
             <a className="relative block h-48 overflow-hidden rounded">
               <img  className="block h-full  object-cover object-center cursor-pointer" width={400} src="https://foodish-api.herokuapp.com/images/butter-chicken/butter-chicken4.jpg" />
             </a>
@@ -29,7 +29,7 @@ function DashboardManager() {
               <h3 className="title-font mb-1 text-xs tracking-widest text-white">Quantité : 300 Repas  </h3>
               <h2 className="title-font text-lg font-bold text-white">Pizza.  <small className='User'>Quantite X 3</small></h2>
               <p className="mt-1 text-white font-light">Price : 240 MAD</p>
-              <button className='bg-orange-500 py-2 px-7 rounded mt-5 text-white'>Command this </button>
+              <button className='bg-orange-600 py-2 px-7 rounded mt-5 text-white'>Command this </button>
             </div>
           </div>
               </div>
@@ -37,7 +37,7 @@ function DashboardManager() {
              
 
         </div>
-        <div className='mt-20     dark:bg-gray-800  rounded-2xl w-2/5 py-10 shadow-xl animate__animated animate__zoomIn'>
+        <div className='mt-20      rounded-2xl w-2/5 py-10 shadow-xl animate__animated animate__zoomIn' style={{backgroundColor:"#153462"}}>
               <h1 className='User font-bold text-2xl tracking-wide text-center  my-5'>Ajouter un manager</h1>
             <form className="w-3/5 mx-auto">
               <div className='flex items-center space-x-6'>
