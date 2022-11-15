@@ -28,13 +28,13 @@ function navBarUser() {
           <p className="block py-2 px-4  User" type="button">{User} </p> 
       </li>
       <li>
-        <Link to="/dashboard" className="block py-2 px-4   dark:hover:text-white">Dashboard </Link>
+        <Link to="/dashboard" className="block py-2 px-4  effect-hover  dark:hover:text-white">Dashboard </Link>
       </li>
       <li>
-        <Link className="block py-2 px-4  dark:hover:text-white" to="/dashboard/menu">Menu</Link>
+        <Link className="block py-2 px-4  effect-hover dark:hover:text-white" to="/dashboard/menu">Menu</Link>
       </li>
       <li>
-        <Link to="/dashboard/me" className="block py-2 px-4   dark:hover:text-white">Profile</Link>
+        <Link to="/dashboard/me" className="block py-2 effect-hover px-4 dark:hover:text-white">Profile</Link>
       </li>
       <li>
       <Logout />

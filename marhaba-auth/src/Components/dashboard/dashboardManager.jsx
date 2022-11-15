@@ -11,11 +11,11 @@ function DashboardManager() {
               <div className='flex justify-between mt-11'>
                  <div className=" p-4    m-2 rounded shadow-xl ml-11 mt-4 " style={{backgroundColor:"#153462"}}>
             <a className="relative block h-48 overflow-hidden rounded">
-              <img  className="block h-full  object-cover object-center cursor-pointer" width={400} src="https://foodish-api.herokuapp.com/images/butter-chicken/butter-chicken4.jpg" />
+              <img  className="block h-full  object-cover object-center cursor-pointer" width={400} src="https://foodish-api.herokuapp.com/images/dessert/dessert32.jpg" />
             </a>
             <div className="mt-4">
-              <h3 className="title-font mb-1 text-xs tracking-widest text-white">Quantité : 300 Repas</h3>
-              <h2 className="title-font text-lg font-bold text-white">Rice.</h2>
+              <h3 className="title-font mb-1 text-xs tracking-widest text-white">Quantité : 300 Repas </h3>
+              <h2 className="title-font text-lg font-bold text-white">Tacos Beldi. <small className='User'>Quantite X 1</small></h2>
               <p className="mt-1 text-white font-light">Price : 80 MAD</p>
               <button className='bg-orange-500 py-2  px-7 rounded mt-5 text-white'>Command this </button>
             </div>
@@ -26,9 +26,9 @@ function DashboardManager() {
               <img  className="block h-full  object-cover object-center cursor-pointer" width={400} src="https://foodish-api.herokuapp.com/images/butter-chicken/butter-chicken4.jpg" />
             </a>
             <div className="mt-4">
-              <h3 className="title-font mb-1 text-xs tracking-widest text-white">Quantité : 300 Repas</h3>
-              <h2 className="title-font text-lg font-bold text-white">Rice.</h2>
-              <p className="mt-1 text-white font-light">Price : 80 MAD</p>
+              <h3 className="title-font mb-1 text-xs tracking-widest text-white">Quantité : 300 Repas  </h3>
+              <h2 className="title-font text-lg font-bold text-white">Pizza.  <small className='User'>Quantite X 3</small></h2>
+              <p className="mt-1 text-white font-light">Price : 240 MAD</p>
               <button className='bg-orange-500 py-2 px-7 rounded mt-5 text-white'>Command this </button>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import '../index.css'
 
 function Logout() {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ function Logout() {
 
   return (
     <Link
-      className="block py-2 px-4  outline-offset-2  dark:hover:text-white"
+      className="block py-2 px-4  effect-hover outline-offset-2  dark:hover:text-white"
       to="/login"
       onClick={ClearLocalStorage}
     >
