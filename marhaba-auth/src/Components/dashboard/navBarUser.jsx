@@ -7,7 +7,7 @@ import Logout from '../logout'
 
 function navBarUser() {
 
- 
+  const role = localStorage.getItem("role")
   const User = localStorage.getItem("User")
 
   return (
@@ -23,15 +23,18 @@ function navBarUser() {
       </div>
 {/* <!-- Dropdown menu --> */}
 <div iclass="  z-10 w-44 bg-white rounded  divide-gray-100 shadow dark:bg-gray-700">
-    <ul class="py-1 text-sm text-gray-700 flex items-stretch dark:text-gray-200" aria-labelledby="dropdownDefault">
+    <ul className="py-1 text-sm text-gray-700 flex items-stretch dark:text-gray-200" aria-labelledby="dropdownDefault">
       <li>
-          <Link to="/dashboard" class="block py-2 px-4  dark:hover:text-white" type="button">{User} </Link> 
+          <p className="block py-2 px-4  User" type="button">{User} </p> 
       </li>
       <li>
-        <Link to="/dashboard" class="block py-2 px-4   dark:hover:text-white">Dashboard </Link>
+        <Link to="/dashboard" className="block py-2 px-4   dark:hover:text-white">Dashboard </Link>
       </li>
       <li>
-        <Link to="/dashboard/me" class="block py-2 px-4   dark:hover:text-white">Profile</Link>
+        <Link className="block py-2 px-4  dark:hover:text-white" to="/dashboard/menu">Menu</Link>
+      </li>
+      <li>
+        <Link to="/dashboard/me" className="block py-2 px-4   dark:hover:text-white">Profile</Link>
       </li>
       <li>
       <Logout />

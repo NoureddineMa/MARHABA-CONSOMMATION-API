@@ -8,13 +8,31 @@ import PageNotFound from './Components/no results/404'
 import GetUser from './Components/dashboard/getUserProfile'
 import Dashboard from './Components/dashboard/dashboard'
 import Homepage  from './Components/HeroSection/homepage'
+
+import DashboardClient from './Components/dashboard/dashboardClient'
+import DashboardLivreur from './Components/dashboard/dashboardLivreur'
+import DashboardManager from './Components/dashboard/dashboardManager'
+
+
 import img from './assets/bak.png'
 import './index.css'
 
 import {BrowserRouter as Router  ,  Routes , Route, Navigate   } from 'react-router-dom'
 
 function App() {
+
   const role = localStorage.getItem("role")
+
+  function ComponenetsByRole(){
+    if(role == "manager"){
+      return <DashboardManager />
+    } else if (role == "client"){
+      return <DashboardClient />
+    } else {
+      return <DashboardLivreur />
+    }
+  }
+
   return (
     <Router>
     <div className='flex w-full h-screen '  style={{backgroundImage: `url(${img})`,backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPosition: 'center',}}>
@@ -29,6 +47,7 @@ function App() {
         <Route path='/resetpassword/:token' element={<Resetpassword />}/>
       </Route>
       <Route path='/dashboard' element={<Dashboard />}>
+      <Route path='menu' element={ComponenetsByRole()}  />
       <Route path='me'  element={ role ? (<GetUser />) : <Navigate to="/login" />  }/>
       </Route>
     </Routes>

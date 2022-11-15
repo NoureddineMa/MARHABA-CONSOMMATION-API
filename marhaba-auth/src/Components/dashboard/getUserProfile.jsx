@@ -47,11 +47,12 @@ function GetUser() {
     return (
 <div className='flex  justify-evenly  '>
         <div className='mt-20     dark:bg-gray-800  rounded-2xl w-2/5 py-10 shadow-xl animate__animated animate__zoomIn'>
-              <h1 className='text-white font-bold text-2xl tracking-wide text-center mt-5'>Modify your profile</h1>
+              <h1 className='User font-bold text-2xl tracking-wide text-center  mt-5'>Modify your profile</h1>
             <form className="w-3/5 mx-auto">
               <div className='flex items-center space-x-6'>
-                <div className="shrink-0 mx-auto">
-                   <img  className="h-20 w-20 object-cover rounded-full my-10 " src={me} />
+                <div className="shrink-0  mx-auto">
+                  {/* we can render img {img} */}
+                   <img  className="h-20 w-20 object-cover rounded-full my-10 " src="https://xsgames.co/randomusers/avatar.php?g=male " />
                 </div>
                 </div>
 
@@ -87,7 +88,7 @@ function GetUser() {
          <p> {!succes && message}</p> */}
          <div className='w-2/5'>
            <div className=" dark:bg-gray-800 py-10  rounded-2xl mb-10  shadow-xl mt-20  animate__animated animate__zoomIn  ">
-          <h2 className="text-white font-bold text-2xl tracking-wide text-center my-16">Profile</h2>
+          <h2 className="User font-bold text-2xl tracking-wide text-center my-16">Profile</h2>
               <p className=" text-white text-center font-semibold my-4  text-ce">Username : <span className='text-white font-light'>{userName}</span></p>
               <p className=" text-white text-center  font-semibold my-4  text-ce">Role : <span className=' text-white font-light '>{Role}</span> </p>
               <p className=" text-white text-center  font-semibold my-4  text-ce">Adresse : <span className=' text-white font-light '>{Adresse}</span> </p>

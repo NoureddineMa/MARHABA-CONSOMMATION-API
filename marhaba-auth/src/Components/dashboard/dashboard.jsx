@@ -2,10 +2,7 @@ import { Outlet} from 'react-router-dom'
 import NavBarUser from './navBarUser'
 
 
-
-
 function Dashboard() {
-
 
   const Name = localStorage.getItem("User")
   const Role = localStorage.getItem("role")
@@ -13,9 +10,11 @@ function Dashboard() {
   return (
   <div> 
    <NavBarUser />
-   <p className=' flex  justify-center mt-20 text-2xl font-bold text-white  '>
-      Hey  { Name }   Welcome To  Your Space  { Role }
-    </p>
+   
+   <h1 className=' flex align-middle text-center mt-11   justify-center  text-4xl font-bold text-white  '>
+      Hey  { Name }   Welcome To  Your <br /> Space  { Role }
+    </h1> 
+   
    <Outlet />
   </div>  
   )

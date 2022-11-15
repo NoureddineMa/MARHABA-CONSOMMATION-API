@@ -42,7 +42,7 @@ function homepage() {
     <div className=" text-center  place-self-center lg:col-span-12 " 
     >
       <p className="max-w-2xl mb-4 text-8xl  text-center font-extrabold tracking-tight leading-none md:text-10xl xl:text-10xl text-white  ">MARHABA  RESTAURANT </p>
-      <p   className="max-w-2xl mb-6  text-gray-500 lg:mb-8 text-base font-medium dark:text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac diam in justo commodo eleifend. Cras condimentum ligula mi, eget suscipit ipsum porta sed. Aenean id mauris accumsan, fringilla libero et, bibendum nisl. Nulla vulputate metus vitae consectetur pretium. Sed eget ante id velit hendrerit vulputate. .</p>
+      <p   className="max-w-2xl mb-6  text-gray-500 lg:mb-8 text-base font-medium capitalize dark:text-white">Si la pizza est le grand classique de la livraison de repas à domicile, cela ne veut pas pour autant dire qu’elle ne fait pas face à une concurrence de plus en plus redoutable. Dans cet article, nous verrons des exemples de branding de livraison de repas dignes d’une étoile Michelin, avec notamment des emballages innovants et écologiques, et des expériences personnalisées. C’est parti !.</p>
       <Link to="/login" className="inline-flex items-center justify-center px-8 hover:shadow-lg  hover:scale-110 py-3  mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 dark:text-white Login">
        Login
       </Link>
